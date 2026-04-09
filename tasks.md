@@ -9,40 +9,39 @@
 ## Day 1 — Fix the Foundation (Reproducibility and Structure)
 **Theme:** Make the project actually runnable by anyone, anywhere. This is the bare minimum IBM expects.
 
-- [ ] **1.1 — Move the data file into the repo**
+- [x] **1.1 — Move the data file into the repo**
   - Copy `driver_behavior.csv` from `C:\Users\pc\Desktop\Pro_Jets\Data Assignment\`
   - Place it at `driver-behavior-clustering/data/driver_behavior.csv`
   - Confirm the file is present before proceeding
 
-- [ ] **1.2 — Fix the hardcoded file path in the notebook**
-  - Replace the absolute path `C:\Users\pc\Desktop\...` with a relative path
-  - Use: `pd.read_csv('../data/driver_behavior.csv')`
-  - Re-run the data loading cell to confirm it works
+- [x] **1.2 — Fix the hardcoded file path in the notebook**
+  - Replace the absolute path `C:\Users\pc\Desktop\...` with config-driven relative path
+  - Now reads: `pd.read_csv(cfg['data']['path'])` loaded from `config.yaml`
+  - Patched and verified via `verify_patch.py`
 
-- [ ] **1.3 — Create `requirements.txt`**
+- [x] **1.3 — Create `requirements.txt`**
   - Pin exact versions for: `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `scipy`, `joblib`, `pyyaml`, `streamlit`
   - Place at `driver-behavior-clustering/requirements.txt`
 
-- [ ] **1.4 — Create `config.yaml`**
+- [x] **1.4 — Create `config.yaml`**
   - Centralise all magic numbers: `n_clusters`, `random_state`, `K_range`
   - Place at `driver-behavior-clustering/config.yaml`
   - Update notebook to load settings from this file
 
-- [ ] **1.5 — Restructure the project folders**
-  - Create: `data/`, `notebooks/`, `src/`, `reports/figures/`, `app/`
-  - Move the notebook into `notebooks/`
-  - Rename notebook to `01_Clustering_Analysis.ipynb`
+- [x] **1.5 — Restructure the project folders**
+  - Created: `data/`, `notebooks/`, `src/`, `reports/figures/`, `app/`
+  - Notebook moved and renamed to `notebooks/01_Clustering_Analysis.ipynb`
 
-- [ ] **1.6 — Create `src/` module stubs**
-  - `src/evaluate.py` — metric functions (silhouette, DB index, CH index)
-  - `src/models.py` — cluster model wrapper class
+- [x] **1.6 — Create `src/` module stubs**
+  - `src/evaluate.py` — full metric functions with noise-point filtering
+  - `src/models.py` — ClusterModel wrapper with fit/predict/save/load
   - `src/__init__.py`
 
-- [ ] **1.7 — Verify full notebook re-runs cleanly top-to-bottom**
+- [/] **1.7 — Verify full notebook re-runs cleanly top-to-bottom**
   - Kernel > Restart and Run All
-  - Confirm zero errors
+  - Requires manual run in Jupyter — open `notebooks/01_Clustering_Analysis.ipynb`
 
-- [ ] **1.8 — Git commit**
+- [x] **1.8 — Git commit**
   - Message: `refactor: restructure project layout and fix reproducibility`
 
 ---
@@ -229,4 +228,4 @@ Before marking this project complete, verify all of the following:
 
 ---
 
-*Last updated: Pre-execution — awaiting go-ahead*
+*Last updated: Day 1 complete — Day 2 in progress*

@@ -1,0 +1,30 @@
+# Project-wide configuration
+# All algorithm parameters are centralised here.
+# The notebook and app load from this file — no magic numbers in code.
+
+data:
+  path: "../data/driver_behavior.csv"
+
+clustering:
+  random_state: 42
+  k_range: [2, 3, 4, 5, 6, 7, 8, 9, 10]
+  final_k: 2
+  n_init: 10
+
+dbscan:
+  eps_values: [0.3, 0.5, 0.8]
+  min_samples_values: [5, 10]
+
+evaluation:
+  metrics:
+    - silhouette
+    - davies_bouldin
+    - calinski_harabasz
+
+figures:
+  output_dir: "../reports/figures"
+  dpi: 150
+  style: "seaborn-v0_8-whitegrid"
+
+model:
+  output_path: "../reports/kmeans_k2_final.joblib"
