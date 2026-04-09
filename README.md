@@ -87,7 +87,12 @@ cd driver-behavior-clustering
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Run the notebook
+# 3. Install the src package in editable mode (one-time, run from repo root)
+#    This makes 'from src.evaluate import ...' work from any directory,
+#    including inside the notebook regardless of how Jupyter was launched.
+pip install -e .
+
+# 4. Run the notebook
 jupyter notebook notebooks/01_Clustering_Analysis.ipynb
 ```
 

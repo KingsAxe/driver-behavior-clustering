@@ -37,13 +37,13 @@ reports/**/*.joblib
 # These were used during project setup only and are not part of the public portfolio.
 patch_notebook.py
 verify_patch.py
-day2_inject.py
-day3_inject.py
-day4_inject.py
+day*_inject.py
+day*_injest.py
 scan_notebook.py
 scan_output.txt
 fix_src_import.py
 fix_cell43.py
+fix_setup_cell.py
 
 # Leftover legacy directories from original submission structure
 /Data/

@@ -1,0 +1,29 @@
+# pyproject.toml
+# Allows 'pip install -e .' from the repo root, making 'src' importable
+# from anywhere — Jupyter launched from any directory, Streamlit, tests, etc.
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "driver-behavior-clustering"
+version = "1.0.0"
+description = "Unsupervised driver segmentation for insurance pricing"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "scikit-learn>=1.5",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "scipy>=1.13",
+    "joblib>=1.4",
+    "pyyaml>=6.0",
+    "streamlit>=1.36",
+    "plotly>=5.22",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
