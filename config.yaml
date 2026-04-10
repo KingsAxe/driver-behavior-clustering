@@ -3,7 +3,7 @@
 # The notebook and app load from this file — no magic numbers in code.
 
 data:
-  path: "../data/driver_behavior.csv"
+  path: "../dataset/driver_behavior.csv"
 
 clustering:
   random_state: 42

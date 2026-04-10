@@ -44,7 +44,7 @@ The analysis covers algorithm selection, cluster validation, business interpreta
 
 ```
 driver-behavior-clustering/
-├── data/
+├── dataset/
 │   └── driver_behavior.csv          # 10,000 drivers, 5 engineered features
 ├── notebooks/
 │   └── 01_Clustering_Analysis.ipynb # Full analysis: EDA → clustering → business narrative

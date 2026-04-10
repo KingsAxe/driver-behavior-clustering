@@ -45,7 +45,3 @@ fix_src_import.py
 fix_cell43.py
 fix_setup_cell.py
 
-# Leftover legacy directories from original submission structure
-/Data/
-/notebook/
-/images/

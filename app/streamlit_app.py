@@ -53,7 +53,7 @@ with open(CONFIG_PATH, "r") as f:
 # ------------------------------------------------------------------ #
 # Load data                                                           #
 # ------------------------------------------------------------------ #
-DATA_PATH = os.path.join(ROOT, "data", "driver_behavior.csv")
+DATA_PATH = os.path.join(ROOT, "dataset", "driver_behavior.csv")
 
 @st.cache_data
 def load_data():
