@@ -98,17 +98,21 @@ jupyter notebook notebooks/01_Clustering_Analysis.ipynb
 
 ---
 
-## How to Run the Dashboard
+## Live Dashboard & Local Execution
 
-```bash
-streamlit run app/streamlit_app.py
-```
+**Live Demo:** [https://driver-behavior-clustering.streamlit.app/](https://driver-behavior-clustering.streamlit.app/)
 
 The dashboard provides:
 - Live cluster explorer (interactive PCA scatter with Plotly)
 - Algorithm comparison table
 - Driver persona profile cards
 - New driver prediction tool (enter feature values, receive segment assignment and pricing recommendation)
+
+### Run Locally
+
+```bash
+streamlit run app/streamlit_app.py
+```
 
 ---
 

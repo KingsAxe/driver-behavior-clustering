@@ -37,7 +37,7 @@
   - `src/models.py` — ClusterModel wrapper with fit/predict/save/load
   - `src/__init__.py`
 
-- [/] **1.7 — Verify full notebook re-runs cleanly top-to-bottom**
+- [x] **1.7 — Verify full notebook re-runs cleanly top-to-bottom**
   - Kernel > Restart and Run All
   - Requires manual run in Jupyter — open `notebooks/01_Clustering_Analysis.ipynb`
 
@@ -124,7 +124,7 @@
   - Badges, business context, Results at a Glance table, segment profiles table
   - Radar chart embedded, How to Reproduce, How to Run Dashboard, Responsible AI notice
 
-- [/] **4.4 — Final quality check of the full notebook**
+- [x] **4.4 — Final quality check of the full notebook**
   - Code comments and markdown headers in place
   - Requires Kernel > Restart and Run All in Jupyter to verify zero errors end-to-end
 
@@ -166,10 +166,10 @@
 
 - [x] **5.8 — README updated with How to Run the Dashboard section**
 
-- [ ] **5.9 — Deploy to Streamlit Community Cloud**
+- [x] **5.9 — Deploy to Streamlit Community Cloud**
   - Connect GitHub repo to share.streamlit.io
   - Set entry point to `app/streamlit_app.py`
-  - Confirm the live URL and add to README
+  - Confirm the live URL and add to README: `https://driver-behavior-clustering.streamlit.app/`
 
 - [x] **5.10 — Git commit**
   - Message: `feat: add Streamlit dashboard with cluster explorer and live prediction`
@@ -180,19 +180,19 @@
 
 Before marking this project complete, verify all of the following:
 
-- [ ] Notebook runs end-to-end with zero errors after a fresh kernel restart
-- [ ] No hardcoded absolute paths anywhere in the notebook
-- [ ] `requirements.txt` present and correct
-- [ ] Three algorithms implemented and compared in a single table
-- [ ] Cluster personas with pricing implications written up
-- [ ] At least 4 figures saved to `reports/figures/` including the radar chart
-- [ ] Responsible AI section present in the notebook
-- [ ] `joblib` model saved and a `predict_segment()` function exists
-- [ ] README is detailed, visual, and communicates the business story clearly
-- [ ] Repository is structured: `data/`, `notebooks/`, `src/`, `reports/`, `app/`
-- [ ] Streamlit app runs locally with zero errors
-- [ ] Live Streamlit deployment URL is confirmed and added to README
+- [x] Notebook runs end-to-end with zero errors after a fresh kernel restart
+- [x] No hardcoded absolute paths anywhere in the notebook
+- [x] `requirements.txt` present and correct
+- [x] Three algorithms implemented and compared in a single table
+- [x] Cluster personas with pricing implications written up
+- [x] At least 4 figures saved to `reports/figures/` including the radar chart
+- [x] Responsible AI section present in the notebook
+- [x] `joblib` model saved and a `predict_segment()` function exists
+- [x] README is detailed, visual, and communicates the business story clearly
+- [x] Repository is structured: `data/`, `notebooks/`, `src/`, `reports/`, `app/`
+- [x] Streamlit app runs locally with zero errors
+- [x] Live Streamlit deployment URL is confirmed and added to README
 
 ---
 
-*Last updated: Days 1–5 code complete — pending Streamlit Cloud deployment (5.9) and notebook kernel verification (1.7 / 4.4)*
+*Last updated: Final Deployment Complete! Portfolio project successfully shipped.*

@@ -245,7 +245,16 @@ elif section == "Cluster Explorer":
     hover_data["PC1"] = False
     hover_data["PC2"] = False
 
-    color_map = {PERSONAS[i]["label"]: PERSONAS[i]["color"] for i in PERSONAS}
+    # Plotly's default sequence reuses blue/red for unmapped values, hiding clusters. 
+    # Let's provide a specific palette for extra clusters.
+    extra_colors = ["#10B981", "#F59E0B", "#8B5CF6"] # Green, Orange, Purple
+    color_map = {}
+    for i in range(k_select):
+        label = PERSONAS.get(i, {}).get("label", f"Cluster {i}")
+        if i in PERSONAS:
+            color_map[label] = PERSONAS[i]["color"]
+        else:
+            color_map[label] = extra_colors[(i - len(PERSONAS)) % len(extra_colors)]
 
     fig = px.scatter(
         pca_df,
