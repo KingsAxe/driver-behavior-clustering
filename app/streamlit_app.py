@@ -12,7 +12,6 @@ Sections:
 """
 
 import os
-import sys
 import yaml
 import joblib
 import numpy as np
@@ -22,16 +21,12 @@ import plotly.graph_objects as go
 import streamlit as st
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
 from sklearn.decomposition import PCA
-from sklearn.metrics import silhouette_score, silhouette_samples, davies_bouldin_score, calinski_harabasz_score
-import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.use("Agg")
+from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
 
 # ------------------------------------------------------------------ #
 # Path setup                                                          #
 # ------------------------------------------------------------------ #
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(ROOT, "src"))
 
 # ------------------------------------------------------------------ #
 # Page configuration                                                  #
@@ -73,7 +68,7 @@ def run_kmeans(k: int):
 @st.cache_data
 def run_pca(k: int):
     df, km, labels = run_kmeans(k)
-    pca = PCA(n_components=2, random_state=cfg["clustering"]["random_state"])
+    pca = PCA(n_components=2)
     coords = pca.fit_transform(df)
     centers_2d = pca.transform(km.cluster_centers_)
     result = df.copy()
